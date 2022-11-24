@@ -3,20 +3,20 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mobiletravelapp/pages/menu_site.dart';
 
-class VirgenLajas extends StatefulWidget {
-  const VirgenLajas({Key? key}) : super(key: key);
+class Mutata extends StatefulWidget {
+  const Mutata({Key? key}) : super(key: key);
 
   @override
-  State<VirgenLajas> createState() => _VirgenLajasState();
+  State<Mutata> createState() => _MutataState();
 }
 
-class _VirgenLajasState extends State<VirgenLajas> {
+class _MutataState extends State<Mutata> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("Santuario de la Virgen de las Lajas",textAlign:TextAlign.center,style: TextStyle(
+        title: const Text("MUTATA LA PUERTA DE ENTRADA A URABA",textAlign:TextAlign.center,style: TextStyle(
           color: Colors.white,
           fontSize: 16,
 
@@ -28,7 +28,7 @@ class _VirgenLajasState extends State<VirgenLajas> {
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
           child: StreamBuilder<QuerySnapshot>(
             stream: FirebaseFirestore.instance
-                .collection("TouristSites").where('idTs', isEqualTo: "VDLL")
+                .collection("TouristSites").where('idTs', isEqualTo: "Mta")
                 .snapshots(),
             builder: (context, snapshot) {
               if (!snapshot.hasData) return const Text('Loading');
@@ -63,8 +63,8 @@ class _VirgenLajasState extends State<VirgenLajas> {
                     endIndent: 10,
                     color: Colors.tealAccent,
                   ),
-                  const Text("PANORÁMICA NOCTURNA DEL SANTUARIO",textAlign:TextAlign.center,style: TextStyle(fontStyle: FontStyle.italic,color: Colors.pink)),
-                  Image.network(site['photos'][2]),
+                  const Text("RESGUARDO INDIGENA",textAlign:TextAlign.center,style: TextStyle(fontStyle: FontStyle.italic,color: Colors.pink)),
+                  Image.network("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Embera.JPG/800px-Embera.JPG"),
                   const Divider(
                     height: 25,
                     thickness: 5,
@@ -72,8 +72,8 @@ class _VirgenLajasState extends State<VirgenLajas> {
                     endIndent: 10,
                     color: Colors.tealAccent,
                   ),
-                  const Text("ALTAR PRINCIPAL DEL SANTUARIO",textAlign:TextAlign.center,style: TextStyle(fontStyle: FontStyle.italic,color: Colors.pink)),
-                  Image.network(site['photos'][3]),
+                  const Text("RIO PIEDRAS BLANCAS",textAlign:TextAlign.center,style: TextStyle(fontStyle: FontStyle.italic,color: Colors.pink)),
+                  Image.network("https://noticiasuraba.com/wp-content/uploads/2017/05/mutata-uraba-1.jpg"),
                   const Divider(
                     height: 25,
                     thickness: 5,
@@ -81,8 +81,8 @@ class _VirgenLajasState extends State<VirgenLajas> {
                     endIndent: 10,
                     color: Colors.tealAccent,
                   ),
-                  const Text("PANORÁMICA FRONTAL DEL SANTUARIO",textAlign:TextAlign.center,style: TextStyle(fontStyle: FontStyle.italic,color: Colors.pink)),
-                  Image.network(site['photos'][1])
+                  const Text("RIO MUTATA",textAlign:TextAlign.center,style: TextStyle(fontStyle: FontStyle.italic,color: Colors.pink)),
+                  Image.network("https://scontent.fbog2-5.fna.fbcdn.net/v/t1.6435-9/68481613_353589148922586_1664584239934341120_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9267fe&_nc_ohc=rUjy32ZuAJIAX8SOfNH&_nc_ht=scontent.fbog2-5.fna&oh=00_AfCq7vbvr_G5ncaeYKXkBMYy3_7l-OXP0vvAlT2vInHIaw&oe=63A68D56")
 
                 ],
               );

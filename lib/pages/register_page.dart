@@ -56,7 +56,7 @@ class _RegisterPageState extends State<RegisterPage> {
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: const Text("INFORMACION IMPORTANTE",
+        title: const Text("¡ATENCIÓN!",
             style: TextStyle(
                 fontSize: 16, fontStyle: FontStyle.italic, color: Colors.red)),
         actions: <Widget>[
@@ -298,7 +298,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
 
                   CheckboxListTile(
-                    title: const Text("Turismo Religioso"),
+                    title: const Text("Turismo Ecológico"),
                     value: _religious,
                     selected: _religious,
                     onChanged: (bool? value) {

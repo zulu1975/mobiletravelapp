@@ -16,7 +16,7 @@ class _WelcomePageState extends State<WelcomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("Sitios turísticos de NARIÑO",textAlign:TextAlign.center,style: TextStyle(
+        title: const Text("Menú Sitios turísticos de URABÁ",textAlign:TextAlign.center,style: TextStyle(
           color: Colors.white,
           fontSize: 16,
 

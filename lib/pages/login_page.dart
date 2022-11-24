@@ -44,12 +44,12 @@ class _LoginPageState extends State<LoginPage> {
         message= "Revise su conexion a INTERNET";
       }else
       if ( result=="user-not-found"){
-        message= "Usuario NO Registrado. Registrate dando CLICK en Registrarse";
-      }else if(_email.text=='wilsonurbano2011@hotmail.com'){
+        message= "Usuario NO Registrado. Presiones Registrarse para Acceder";
+      }else if(_email.text=='edwinzuluaga@prueba.com'){
         // ignore: use_build_context_synchronously
         Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const AdmonSites()));
       }else{
-        message = "BIENVENIDO A TURISMO FACIL";
+        message = "BIENVENIDO A TURISMO URABA";
         // ignore: use_build_context_synchronously
         Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const WelcomePage()));
       }
@@ -65,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: const Text("TURISMO ONLINE"),
+          title: const Text("TURISMO EN LINEA, VISITE URABA"),
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),

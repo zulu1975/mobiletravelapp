@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mobiletravelapp/pages/login_page.dart';
-import 'package:mobiletravelapp/touristSites/iglesia_san_francisco.dart';
-import 'package:mobiletravelapp/touristSites/parque_quijote.dart';
-import 'package:mobiletravelapp/touristSites/puente_humilladero.dart';
-import 'package:mobiletravelapp/touristSites/virgen_lajas.dart';
-import 'package:mobiletravelapp/touristSites/virgen_playa.dart';
+import 'package:mobiletravelapp/touristSites/mutata.dart';
+import 'package:mobiletravelapp/touristSites/apartado.dart';
+import 'package:mobiletravelapp/touristSites/chigorodo.dart';
+import 'package:mobiletravelapp/touristSites/turbo.dart';
+import 'package:mobiletravelapp/touristSites/arboletes.dart';
 
 class MenuWelcome extends StatelessWidget {
   const MenuWelcome({Key? key}) : super(key: key);
@@ -25,42 +25,42 @@ class MenuWelcome extends StatelessWidget {
             children: [
               ListTile(
                 leading: const Icon(Icons.church_outlined, size: 20, color: Colors.lightBlue,),
-                title: const Text("Santuario Virgen de las Lajas", style: TextStyle(fontSize: 20),),
+                title: const Text("Conozca Turbo, La Capital Portuaria de Uraba", style: TextStyle(fontSize: 20),),
                 textColor: Colors.green,
                 onTap: (){
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const VirgenLajas()));
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Turbo()));
                 },
               ),
               ListTile(
                 leading: const Icon(Icons.church_outlined, size: 20, color: Colors.lightBlue,),
-                title: const Text("Santuario Virgen de la Playa", style: TextStyle(fontSize: 20),),
+                title: const Text("Conozca Chigorodó y su fiesta Ganadera", style: TextStyle(fontSize: 20),),
                 textColor: Colors.green,
                 onTap: (){
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const VirgenPlaya()));
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Arboletes()));
                 },
               ),
               ListTile(
                 leading: const Icon(Icons.church_outlined, size: 20, color: Colors.lightBlue,),
-                title: const Text("Parque Don Quijote", style: TextStyle(fontSize: 20),),
+                title: const Text("Conozca Apartadó y su feria del Banano", style: TextStyle(fontSize: 20),),
                 textColor: Colors.green,
                 onTap: (){
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const ParqueQuijote()));
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const apartado()));
                 },
               ),
               ListTile(
                 leading: const Icon(Icons.church_outlined, size: 20, color: Colors.lightBlue,),
-                title: const Text("Iglesia San Francisco", style: TextStyle(fontSize: 20),),
+                title: const Text("Conozca MUTATA, y sus espectaculares Rios", style: TextStyle(fontSize: 20),),
                 textColor: Colors.green,
                 onTap: (){
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const IglesiaSanFrancisco()));
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Mutata()));
                 },
               ),
               ListTile(
                 leading: const Icon(Icons.church_outlined, size: 20, color: Colors.lightBlue,),
-                title: const Text("Puente del Humilladero", style: TextStyle(fontSize: 20),),
+                title: const Text("Conozca Arboletes y su majestuoso Volcan", style: TextStyle(fontSize: 20),),
                 textColor: Colors.green,
                 onTap: (){
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const PuenteHumilladero()));
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Chigorodo()));
                 },
               ),
               ListTile(

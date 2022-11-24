@@ -17,7 +17,7 @@ class _AdmonSitesState extends State<AdmonSites> {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: const Text("TURISMO WILUR"),
+          title: const Text("Zona Turistica Urabá"),
         ),
         drawer: const MenuWelcome(),
         body: Padding(

@@ -3,21 +3,20 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mobiletravelapp/pages/menu_site.dart';
 
-class ParqueQuijote extends StatefulWidget {
-  const ParqueQuijote({Key? key}) : super(key: key);
+class Arboletes extends StatefulWidget {
+  const Arboletes({Key? key}) : super(key: key);
 
   @override
-  State<ParqueQuijote> createState() => _ParqueQuijoteState();
+  State<Arboletes> createState() => _ArboletesState();
 }
 
-class _ParqueQuijoteState extends State<ParqueQuijote> {
-
+class _ArboletesState extends State<Arboletes> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("PARQUE DON QUIJOTE",textAlign:TextAlign.center,style: TextStyle(
+        title: const Text("CHIGORODO",textAlign:TextAlign.center,style: TextStyle(
           color: Colors.white,
           fontSize: 16,
 
@@ -29,7 +28,7 @@ class _ParqueQuijoteState extends State<ParqueQuijote> {
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
           child: StreamBuilder<QuerySnapshot>(
             stream: FirebaseFirestore.instance
-                .collection("TouristSites").where('idTs', isEqualTo: "PDQ")
+                .collection("TouristSites").where('idTs', isEqualTo: "Chgdo")
                 .snapshots(),
             builder: (context, snapshot) {
               if (!snapshot.hasData) return const Text('Loading');
@@ -64,8 +63,8 @@ class _ParqueQuijoteState extends State<ParqueQuijote> {
                     endIndent: 10,
                     color: Colors.tealAccent,
                   ),
-                  const Text("ESCULTURA CENTRAL DEL PARQUE",textAlign:TextAlign.center,style: TextStyle(fontStyle: FontStyle.italic,color: Colors.pink)),
-                  Image.network("https://firebasestorage.googleapis.com/v0/b/tourismwilur.appspot.com/o/ParqueQuijote%2Fparque3.jpg?alt=media&token=93c90906-3694-429d-b943-35892ab76f9a"),
+                  const Text("CHIGORODO CAPITAL GANADERA",textAlign:TextAlign.center,style: TextStyle(fontStyle: FontStyle.italic,color: Colors.pink)),
+                  Image.network("https://upload.wikimedia.org/wikipedia/commons/d/d6/Chigorod%C3%B3.jpg"),
                   const Divider(
                     height: 25,
                     thickness: 5,
@@ -73,8 +72,8 @@ class _ParqueQuijoteState extends State<ParqueQuijote> {
                     endIndent: 10,
                     color: Colors.tealAccent,
                   ),
-                  const Text("FOTO PARQUE LATERAL",textAlign:TextAlign.center,style: TextStyle(fontStyle: FontStyle.italic,color: Colors.pink)),
-                  Image.network("https://firebasestorage.googleapis.com/v0/b/tourismwilur.appspot.com/o/ParqueQuijote%2Fparque2.jpg?alt=media&token=a45acf1e-dbe1-4348-91dc-05f8e2b67c8f"),
+                  const Text("FERIA GANADERA",textAlign:TextAlign.center,style: TextStyle(fontStyle: FontStyle.italic,color: Colors.pink)),
+                  Image.network("https://revistaurabapremium.com/wp-content/uploads/WhatsApp-Image-2019-03-28-at-2.48.07-PM-1024x576.jpeg"),
                   const Divider(
                     height: 25,
                     thickness: 5,
@@ -82,8 +81,8 @@ class _ParqueQuijoteState extends State<ParqueQuijote> {
                     endIndent: 10,
                     color: Colors.tealAccent,
                   ),
-                  const Text("FOTO CENTRAL DEL PARQUE",textAlign:TextAlign.center,style: TextStyle(fontStyle: FontStyle.italic,color: Colors.pink)),
-                  Image.network("https://firebasestorage.googleapis.com/v0/b/tourismwilur.appspot.com/o/ParqueQuijote%2Fparque1.jpg?alt=media&token=e3b420fc-b7bc-4b7a-a401-c4d592c7ca4f")
+                  const Text("VISTA PARQUE PRINCIPAL",textAlign:TextAlign.center,style: TextStyle(fontStyle: FontStyle.italic,color: Colors.pink)),
+                  Image.network("https://www.elcolombiano.com/documents/10157/0/849x562/0c0/0d0/none/11101/CPHJ/image_content_23191193_20150414165320.jpg"),
 
                 ],
               );

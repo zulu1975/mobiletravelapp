@@ -28,7 +28,7 @@ class _SplashPageState extends State<SplashPage> {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: const Text("TURISMO RELIGIOSO"),
+          title: const Text("TURISMO URABA"),
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
@@ -41,7 +41,7 @@ class _SplashPageState extends State<SplashPage> {
                   SizedBox(
                       height: 12.0),
                   Text(
-                    "WELCOME OUR WORLD",
+                    "BIENVENIDO",
                     style: TextStyle(fontSize: 18, fontStyle: FontStyle.italic, ),
                   )
                 ],

@@ -3,20 +3,21 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mobiletravelapp/pages/menu_site.dart';
 
-class IglesiaSanFrancisco extends StatefulWidget {
-  const IglesiaSanFrancisco({Key? key}) : super(key: key);
+class apartado extends StatefulWidget {
+  const apartado({Key? key}) : super(key: key);
 
   @override
-  State<IglesiaSanFrancisco> createState() => _IglesiaSanFranciscoState();
+  State<apartado> createState() => _apartadoState();
 }
 
-class _IglesiaSanFranciscoState extends State<IglesiaSanFrancisco> {
+class _apartadoState extends State<apartado> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("IGLESIA SAN FRANCISCO",textAlign:TextAlign.center,style: TextStyle(
+        title: const Text("APARTADÓ, RIO DE PLATANOS",textAlign:TextAlign.center,style: TextStyle(
           color: Colors.white,
           fontSize: 16,
 
@@ -28,7 +29,7 @@ class _IglesiaSanFranciscoState extends State<IglesiaSanFrancisco> {
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
           child: StreamBuilder<QuerySnapshot>(
             stream: FirebaseFirestore.instance
-                .collection("TouristSites").where('idTs', isEqualTo: "ISF")
+                .collection("TouristSites").where('idTs', isEqualTo: "Aptdo")
                 .snapshots(),
             builder: (context, snapshot) {
               if (!snapshot.hasData) return const Text('Loading');
@@ -63,8 +64,8 @@ class _IglesiaSanFranciscoState extends State<IglesiaSanFrancisco> {
                     endIndent: 10,
                     color: Colors.tealAccent,
                   ),
-                  const Text("VISTA FRONTAL DE LA IGLESIA",textAlign:TextAlign.center,style: TextStyle(fontStyle: FontStyle.italic,color: Colors.pink)),
-                  Image.network("https://firebasestorage.googleapis.com/v0/b/tourismwilur.appspot.com/o/IglesiaSanFrancisco%2Fisf2.jpg?alt=media&token=61973830-7b11-415b-aaef-8745b0126795"),
+                  const Text("APARTADO",textAlign:TextAlign.center,style: TextStyle(fontStyle: FontStyle.italic,color: Colors.pink)),
+                  Image.network("https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_790/https://alkilautos.com/blog/wp-content/uploads/2019/12/APARTADO1.jpg"),
                   const Divider(
                     height: 25,
                     thickness: 5,
@@ -72,8 +73,8 @@ class _IglesiaSanFranciscoState extends State<IglesiaSanFrancisco> {
                     endIndent: 10,
                     color: Colors.tealAccent,
                   ),
-                  const Text("ALTAR PRINCIPAL",textAlign:TextAlign.center,style: TextStyle(fontStyle: FontStyle.italic,color: Colors.pink)),
-                  Image.network("https://firebasestorage.googleapis.com/v0/b/tourismwilur.appspot.com/o/IglesiaSanFrancisco%2Fisf3.jpg?alt=media&token=dc8e283d-0ac8-426e-babf-8ff823ff6351"),
+                  const Text("ZONA BANANERA",textAlign:TextAlign.center,style: TextStyle(fontStyle: FontStyle.italic,color: Colors.pink)),
+                  Image.network("https://www.elmundo.com/assets/uploads/files/rural-Uraba-web.jpg"),
                   const Divider(
                     height: 25,
                     thickness: 5,
@@ -81,8 +82,8 @@ class _IglesiaSanFranciscoState extends State<IglesiaSanFrancisco> {
                     endIndent: 10,
                     color: Colors.tealAccent,
                   ),
-                  const Text("ALTAR SAN FRANCISCO",textAlign:TextAlign.center,style: TextStyle(fontStyle: FontStyle.italic,color: Colors.pink)),
-                  Image.network("https://firebasestorage.googleapis.com/v0/b/tourismwilur.appspot.com/o/IglesiaSanFrancisco%2Fisf4.jpg?alt=media&token=44027fa8-cccb-4771-bed7-d20c47b1a1ce")
+                  const Text("FOTO CENTRAL DEL PARQUE",textAlign:TextAlign.center,style: TextStyle(fontStyle: FontStyle.italic,color: Colors.pink)),
+                  Image.network("https://www.elmundo.com/assets/uploads/files/424fb-caravana-por-la-vida-apartado-web.jpg")
 
                 ],
               );

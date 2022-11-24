@@ -3,20 +3,20 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mobiletravelapp/pages/menu_site.dart';
 
-class VirgenPlaya extends StatefulWidget {
-  const VirgenPlaya({Key? key}) : super(key: key);
+class Chigorodo extends StatefulWidget {
+  const Chigorodo({Key? key}) : super(key: key);
 
   @override
-  State<VirgenPlaya> createState() => _VirgenPlayaState();
+  State<Chigorodo> createState() => _ChigorodoState();
 }
 
-class _VirgenPlayaState extends State<VirgenPlaya> {
+class _ChigorodoState extends State<Chigorodo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("Santuario de la Virgen de Playa",textAlign:TextAlign.center,style: TextStyle(
+        title: const Text("ARBOLETES",textAlign:TextAlign.center,style: TextStyle(
           color: Colors.white,
           fontSize: 16,
 
@@ -28,7 +28,7 @@ class _VirgenPlayaState extends State<VirgenPlaya> {
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
           child: StreamBuilder<QuerySnapshot>(
             stream: FirebaseFirestore.instance
-                .collection("TouristSites").where('idTs', isEqualTo: "yy")
+                .collection("TouristSites").where('idTs', isEqualTo: "Abltes")
                 .snapshots(),
             builder: (context, snapshot) {
               if (!snapshot.hasData) return const Text('Loading');
@@ -68,7 +68,7 @@ class _VirgenPlayaState extends State<VirgenPlaya> {
                     endIndent: 10,
                     color: Colors.tealAccent,
                   ),
-                  const Text("IMAGEN DE LA VIRGEN", textAlign: TextAlign.center,
+                  const Text("ARBOLETES Y SU MAJESTUOSO VOLVAN DE LODO", textAlign: TextAlign.center,
                       style: TextStyle(
                           fontStyle: FontStyle.italic, color: Colors.pink)),
                   Image.network(site['photos'][3]),
@@ -80,7 +80,7 @@ class _VirgenPlayaState extends State<VirgenPlaya> {
                     endIndent: 10,
                     color: Colors.tealAccent,
                   ),
-                  const Text("IMAGEN DE LA VIRGEN EN LA ROCA",
+                  const Text("PARQUE DE ARBOLETES",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           fontStyle: FontStyle.italic, color: Colors.pink)),
@@ -93,7 +93,7 @@ class _VirgenPlayaState extends State<VirgenPlaya> {
                     endIndent: 10,
                     color: Colors.tealAccent,
                   ),
-                  const Text("PANORÁMICA FRONTAL DEL SANTUARIO",
+                  const Text("PPLAYAS DE ARBOLETES",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           fontStyle: FontStyle.italic, color: Colors.pink)),
@@ -106,8 +106,7 @@ class _VirgenPlayaState extends State<VirgenPlaya> {
                     endIndent: 10,
                     color: Colors.tealAccent,
                   ),
-                  const Text(
-                      "IMAGEN DEL SANTUARIO", textAlign: TextAlign.center,
+                  const Text("VOLCAN DE LODO", textAlign: TextAlign.center,
                       style: TextStyle(
                           fontStyle: FontStyle.italic, color: Colors.pink)),
                   Image.network(site['photos'][0])
